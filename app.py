@@ -23,6 +23,10 @@ CORS(app)
 # ----------------------
 # Helpers
 # ----------------------
+@app.route("/")
+def home():
+    return "Backend is running 🚀"
+
 def file_to_data_url(file_storage) -> Tuple[str, bytes]:
     raw = file_storage.read()
     file_storage.stream.seek(0)
